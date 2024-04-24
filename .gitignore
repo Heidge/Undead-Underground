@@ -61,6 +61,8 @@ sysinfo.txt
 *.aab
 *.unitypackage
 *.app
+AxelScene.*
+PierreScene.*
 
 # Crashlytics generated file
 crashlytics-build.properties
