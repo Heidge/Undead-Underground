@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 6563505358998619561}
   - component: {fileID: -7226881776003885129}
   m_Layer: 0
-  m_Name: Zombie_test
+  m_Name: Zombie_walk_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -271,7 +271,7 @@ Animator:
   m_GameObject: {fileID: 6563505358625877173}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b08646391a2b18843b79f4f415f4e133, type: 3}
-  m_Controller: {fileID: 9100000, guid: ad16c4f4522f94840a4ad8effcfd7830, type: 2}
+  m_Controller: {fileID: 9100000, guid: a78ccf4587b286648bceaa91fdc6b453, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1

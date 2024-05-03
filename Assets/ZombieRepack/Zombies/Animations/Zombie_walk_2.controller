@@ -20,7 +20,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 6994970e75576a94287191f17b9b6886, type: 2}
+  m_Motion: {fileID: 7400000, guid: bde51ab349672174c8f399a5444280b6, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -101,7 +101,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 17028d42d2c662040af51ca6e8b9a850, type: 2}
+  m_Motion: {fileID: 7400000, guid: eb2f6c1e5f3b7e343888264fe2fe2a4a, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -156,7 +156,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 41e19a14b45622440beeefa257c6b6aa, type: 2}
+  m_Motion: {fileID: 7400000, guid: 7d9b189e7269ecd4ebd2aacdf77696eb, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -249,7 +249,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Zombie_walk_1
+  m_Name: Zombie_walk_2
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: isWalking
