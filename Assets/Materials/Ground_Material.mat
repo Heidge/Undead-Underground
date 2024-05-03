@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6841973640678649424
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 13
+  hdPluginSubTargetMaterialVersions:
+    m_Keys: []
+    m_Values: 
 --- !u!21 &2100000
 Material:
   serializedVersion: 8
@@ -9,7 +25,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Ground_Material
   m_Shader: {fileID: 4800000, guid: 6e4ae4064600d784cac1e41a9e6f2e59, type: 3}
-  m_Parent: {fileID: 2100000, guid: 1b3ba787cd5b7ac4e8f4097c1a306032, type: 2}
+  m_Parent: {fileID: 2100000, guid: 5dfa173a088211143840f537c3ee6bd1, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _DISABLE_SSR_TRANSPARENT
@@ -42,10 +58,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _InvTilingScale: 0.00048828125
+    - _AORemapMin: 1
+    - _MetallicRemapMax: 0
+    - _SmoothnessRemapMax: 0
     m_Colors:
-    - _BaseColor: {r: 0.5499288, g: 0.59932363, b: 0.6981132, a: 1}
-    - _Color: {r: 0.5499288, g: 0.59932363, b: 0.6981132, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
 --- !u!114 &8451493348266693084
 MonoBehaviour:
