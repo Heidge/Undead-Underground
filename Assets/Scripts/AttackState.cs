@@ -20,15 +20,12 @@ public class AttackState : StateMachineBehaviour
 		if (distance >= 3f)
 		{
 			animator.SetBool("isAttacking", false);
-			animator.SetBool("isWalking", true);
-			
+			animator.SetBool("isWalking", true);			
 		}
-
 	}
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		agent.SetDestination(animator.transform.position);
-
 	}
 }
