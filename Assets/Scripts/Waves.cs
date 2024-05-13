@@ -9,11 +9,13 @@ public class Waves : MonoBehaviour
     public GameObject[] zombiesPrefab;
     public GameObject[] spawnPoints;
     public static Waves instance;
+    private AudioSource audioSource;
 
     void Awake()
     {
 		if (instance == null)
 			instance = this;
+        audioSource = GetComponent<AudioSource>();
 	}
 
     void Start()
@@ -26,12 +28,14 @@ public class Waves : MonoBehaviour
     public IEnumerator WavesTransition()
 	{
         zombieNumber = 5 + 5 * waveNumber;
-		yield return new WaitForSeconds(15.0f);
+		yield return new WaitForSeconds(20.0f);
 		StartWave();
 	}
 
     void StartWave()
     {
+                if (audioSource.isPlaying == false)
+            audioSource.Play();
         for (int i = 0; i < zombieNumber; i++)
         {
 			int randomZombie = Random.Range(0, zombiesPrefab.Length);

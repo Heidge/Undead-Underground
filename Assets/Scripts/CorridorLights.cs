@@ -34,11 +34,14 @@ public class CorridorLights : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         var len = leftLights.Count;
+        var timer = 0.8f;
+
         for (int i = 0; i < len; i++)
         {
             leftLights[i].Switch(true);
             rightLights[i].Switch(true);
-            yield return new WaitForSeconds(0.8f);
+            yield return new WaitForSeconds(timer);
+            timer -= 0.2f;
         }
     }
 

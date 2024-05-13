@@ -23,7 +23,9 @@ public class Intro : MonoBehaviour
     {
         StartCoroutine(SwitchBase(2.0f));
         StartCoroutine(SwitchOnProjectors(6f));
-        StartCoroutine(rightLights.GetComponent<CorridorLights>().SwitchCorridor(10.0f));
+        StartCoroutine(rightLights.GetComponent<CorridorLights>().SwitchCorridor(8.0f));
+        StartCoroutine(middleLights.GetComponent<CorridorLights>().SwitchCorridor(8.0f));
+        StartCoroutine(leftLights.GetComponent<CorridorLights>().SwitchCorridor(8.0f));
     }
 
     IEnumerator SwitchBase(float time)
@@ -46,7 +48,6 @@ public class Intro : MonoBehaviour
         lights = lights.OrderBy(lights => lights.transform.position.x).ToList();
         foreach (StairLight light in lights)
         {
-            light.Switch(true);
             yield return new WaitForSeconds(1.0f);
         }
 
