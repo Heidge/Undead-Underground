@@ -13,7 +13,7 @@ public class Waves : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartWave();
+        StartCoroutine(WavesTransition());
     }
 
     void Awake()
@@ -25,7 +25,7 @@ public class Waves : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		
+
 		if (zombieNumber == 0)
         {
 			zombieNumber = 5 + 5 * waveNumber;
@@ -46,7 +46,7 @@ public class Waves : MonoBehaviour
 
 	public IEnumerator WavesTransition()
 	{
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(15.0f);
 		StartWave();
 	}
 

@@ -15,8 +15,6 @@ public class CorridorLights : MonoBehaviour
             {
                 foreach (Transform light in child)
                 {
-                Debug.Log(light.name);
-                Debug.Log(light.GetComponent<StairLight>());
                     leftLights.Add(light.GetComponent<StairLight>());
                 }
             }
@@ -34,12 +32,13 @@ public class CorridorLights : MonoBehaviour
 
     public IEnumerator SwitchCorridor(float delay)
     {
+        yield return new WaitForSeconds(delay);
         var len = leftLights.Count;
         for (int i = 0; i < len; i++)
         {
             leftLights[i].Switch(true);
             rightLights[i].Switch(true);
-            yield return new WaitForSeconds(delay);
+            yield return new WaitForSeconds(0.8f);
         }
     }
 
