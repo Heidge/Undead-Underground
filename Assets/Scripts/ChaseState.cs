@@ -23,7 +23,6 @@ public class ChaseState : StateMachineBehaviour
 		//Debug.Log(animator.GetBool("isWalking") + " " + distance);
 		if (distance < 3f)
 		{
-			animator.SetBool("isWalking", false);
 			animator.SetBool("isAttacking", true);
 		}
 	}
