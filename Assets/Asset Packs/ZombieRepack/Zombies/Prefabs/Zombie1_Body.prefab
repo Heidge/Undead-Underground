@@ -814,8 +814,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.2, y: 2.2, z: 2.2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8370160553937208654}
   - {fileID: 8370160553672572819}
@@ -910,8 +910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
-  zombieAnimator: {fileID: 3348246596417575698, guid: d0155bedc29daea459e376fc9fd4f3d2, type: 3}
-  instance: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!1 &8370160553551626750
 GameObject:
   m_ObjectHideFlags: 0
