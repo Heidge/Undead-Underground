@@ -7,15 +7,15 @@ public class Zombie : MonoBehaviour
 {
     public int hp = 100;
     public Animator zombieAnimator;
-    public Waves instance;
     
     void Update()
     {
         if (hp <= 0)
         {
             Debug.Log("Zombie dead");
-            instance.zombieNumber--;
+            Waves.instance.zombieNumber--;
             zombieAnimator.SetBool("isDead", true);
+            Destroy(gameObject);
         }
     }
 
@@ -26,6 +26,6 @@ public class Zombie : MonoBehaviour
             zombieAnimator.Play("Hit");
             hp -= damage;
         }
-            
+    
     }
 }

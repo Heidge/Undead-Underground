@@ -8,7 +8,7 @@ public class Waves : MonoBehaviour
     public int zombieNumber = 0;
     public GameObject[] zombiesPrefab;
     public GameObject[] spawnPoints;
-    private static Waves instance;
+    public static Waves instance;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +46,7 @@ public class Waves : MonoBehaviour
 
 	public IEnumerator WavesTransition()
 	{
-		yield return new WaitForSeconds(10);
+		yield return new WaitForSeconds(1);
 		StartWave();
 	}
 

@@ -1943,9 +1943,10 @@ GameObject:
   - component: {fileID: 8358275188328761687}
   - component: {fileID: 8358275188328761686}
   - component: {fileID: 4889589799216284336}
+  - component: {fileID: 1612903319968451406}
   m_Layer: 0
   m_Name: Zombie_crawl_2
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2033,3 +2034,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1612903319968451406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8358275187619431381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ace0a4d048b3094dbfc906eed221528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 100
+  zombieAnimator: {fileID: 3348246596417575698, guid: d0155bedc29daea459e376fc9fd4f3d2, type: 3}
+  instance: {fileID: 0}

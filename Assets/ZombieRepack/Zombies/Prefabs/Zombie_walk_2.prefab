@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 491900362966643467}
   - component: {fileID: 491900362966643464}
   - component: {fileID: -8030995345076518681}
+  - component: {fileID: -2193020494447946123}
   m_Layer: 0
   m_Name: Zombie_walk_2
-  m_TagString: Untagged
+  m_TagString: Zombie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,6 +103,21 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-2193020494447946123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491900364330574472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ace0a4d048b3094dbfc906eed221528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 100
+  zombieAnimator: {fileID: 3348246596417575698, guid: d0155bedc29daea459e376fc9fd4f3d2, type: 3}
+  instance: {fileID: 0}
 --- !u!1 &491900364330574480
 GameObject:
   m_ObjectHideFlags: 0
