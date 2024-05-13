@@ -21,14 +21,11 @@ public class AttackState : StateMachineBehaviour
 		{
 			animator.SetBool("isAttacking", false);
 			animator.SetBool("isWalking", true);
-			
 		}
-
 	}
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		agent.SetDestination(animator.transform.position);
-
 	}
 }

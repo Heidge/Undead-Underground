@@ -5,19 +5,27 @@ using UnityEngine.AI;
 
 public class Zombie : MonoBehaviour
 {
-    Animator animator;
-    float fixedRotation = 0.0f;
-    Transform player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        animator = GetComponent<Animator>();
-    }
-
-    // Update is called once per frame
+    public int hp = 100;
+    public Animator zombieAnimator;
+    
     void Update()
     {
+        if (hp <= 0)
+        {
+            Debug.Log("Zombie dead");
+            Waves.instance.zombieNumber--;
+            zombieAnimator.SetBool("isDead", true);
+            Destroy(gameObject);
+        }
+    }
 
+    public void TakeDamage(int damage)
+    {
+        if (hp > 0)
+        {
+            zombieAnimator.Play("Hit");
+            hp -= damage;
+        }
+    
     }
 }
