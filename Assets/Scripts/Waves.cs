@@ -5,16 +5,10 @@ using UnityEngine;
 public class Waves : MonoBehaviour
 {
     public int waveNumber = 1;
-    public int zombieNumber = 0;
+    public int zombieNumber = 1;
     public GameObject[] zombiesPrefab;
     public GameObject[] spawnPoints;
     public static Waves instance;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        StartCoroutine(WavesTransition());
-    }
 
     void Awake()
     {
@@ -22,16 +16,19 @@ public class Waves : MonoBehaviour
 			instance = this;
 	}
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-
-		if (zombieNumber == 0)
-        {
-			zombieNumber = 5 + 5 * waveNumber;
-			StartCoroutine(WavesTransition());
-		}
+        waveNumber = 1;
+        zombieNumber = 1;
+        StartCoroutine(WavesTransition());
     }
+
+    public IEnumerator WavesTransition()
+	{
+        zombieNumber = 0 + 1 * waveNumber;
+		yield return new WaitForSeconds(1.0f);
+		StartWave();
+	}
 
     void StartWave()
     {
@@ -42,12 +39,6 @@ public class Waves : MonoBehaviour
             Instantiate(zombiesPrefab[randomZombie], spawnPoints[randomSpawnPoint].transform.position, Quaternion.identity);
 		}
 		waveNumber++;
-	}
-
-	public IEnumerator WavesTransition()
-	{
-		yield return new WaitForSeconds(15.0f);
-		StartWave();
 	}
 
 }

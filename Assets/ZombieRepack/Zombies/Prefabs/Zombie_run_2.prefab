@@ -1913,7 +1913,7 @@ GameObject:
   - component: {fileID: -3767680741029567413}
   - component: {fileID: 5174487143103954098}
   - component: {fileID: 3981887708283141762}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Zombie_run_2
   m_TagString: Zombie
   m_Icon: {fileID: 0}
@@ -2016,7 +2016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
-  zombieAnimator: {fileID: 3348246596417575698, guid: d0155bedc29daea459e376fc9fd4f3d2, type: 3}
+  animator: {fileID: 638381708588418866}
 --- !u!82 &3981887708283141762
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2029,7 +2029,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f1ff3e33006a291449618f6fc613e928, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2037,8 +2037,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 0.1
+  MaxDistance: 25
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -2073,7 +2073,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
