@@ -5,38 +5,45 @@ using UnityEngine;
 
 public class CorridorLights : MonoBehaviour
 {
-    private List<Transform> leftLights;
-    private List<Transform> rightLights;
+    private List<StairLight> leftLights = new();
+    private List<StairLight> rightLights = new();
     public void Awake()
     {
         foreach (Transform child in transform)
         {
             if (child.name == "left")
             {
-                foreach (Tranform light in child)
+                foreach (Transform light in child)
                 {
+                Debug.Log(light.name);
+                Debug.Log(light.GetComponent<StairLight>());
                     leftLights.Add(light.GetComponent<StairLight>());
                 }
             }
             if (child.name == "right")
             {
-                foreach (Tranform light in child)
+                foreach (Transform light in child)
                 {
-                    rightLights.Add(light);
+                    rightLights.Add(light.GetComponent<StairLight>());
                 }
             }
         }
-        leftLights.OrderBy(x => Vector3.Distance(Vector3.Zero, x.position);
-        rightLights.OrderBy(x => Vector3.Distance(Vector3.Zero, x.position);
+        leftLights.OrderBy(x => Vector3.Distance(Vector3.zero, x.transform.position));
+        rightLights.OrderBy(x => Vector3.Distance(Vector3.zero, x.transform.position));
     }
 
-    IEnumerator SwitchCorridor(float delay)
+    public IEnumerator SwitchCorridor(float delay)
     {
-        foreach ()
+        var len = leftLights.Count;
+        for (int i = 0; i < len; i++)
+        {
+            leftLights[i].Switch(true);
+            rightLights[i].Switch(true);
+            yield return new WaitForSeconds(delay);
+        }
     }
-    public void SwitchLight(transform object, bool on)
-    {
-        object.GetComponent<StairLight>*().SwitchLight(on);
-    }
+
+
+
 
 }

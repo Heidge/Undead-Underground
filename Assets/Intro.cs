@@ -23,12 +23,12 @@ public class Intro : MonoBehaviour
     {
         StartCoroutine(SwitchBase(2.0f));
         StartCoroutine(SwitchOnProjectors(6.5f));
-
+        StartCoroutine(rightLights.GetComponent<CorridorLights>().SwitchCorridor(1.0f));
     }
 
     public void SwitchCorridor(bool on, string corridor)
     {
-        
+
     }
     IEnumerator SwitchBase(float time)
     {
@@ -51,7 +51,7 @@ public class Intro : MonoBehaviour
         foreach (StairLight light in lights)
         {
             light.Switch(true);
-            yield return new WaitForSeconds(1.0f); 
+            yield return new WaitForSeconds(1.0f);
         }
 
     }
