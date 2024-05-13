@@ -22,14 +22,10 @@ public class Intro : MonoBehaviour
     public void PlayIntro()
     {
         StartCoroutine(SwitchBase(2.0f));
-        StartCoroutine(SwitchOnProjectors(6.5f));
-        StartCoroutine(rightLights.GetComponent<CorridorLights>().SwitchCorridor(1.0f));
+        StartCoroutine(SwitchOnProjectors(6f));
+        StartCoroutine(rightLights.GetComponent<CorridorLights>().SwitchCorridor(10.0f));
     }
 
-    public void SwitchCorridor(bool on, string corridor)
-    {
-
-    }
     IEnumerator SwitchBase(float time)
     {
         List<StairLight> lights = new();
@@ -58,7 +54,6 @@ public class Intro : MonoBehaviour
 
     IEnumerator SwitchOnProjectors(float time)
     {
-        Debug.Log("Hello");
         var lightsA = generatorLightA.transform.Find("Lights");
         var lightsB = generatorLightB.transform.Find("Lights");
         var audioA = generatorLightA.GetComponent<AudioSource>();
