@@ -20,7 +20,7 @@ public class AttackState : StateMachineBehaviour
 		if (distance >= 3f)
 		{
 			animator.SetBool("isAttacking", false);
-			animator.SetBool("isWalking", true);			
+			animator.SetBool("isWalking", true);
 		}
 	}
 

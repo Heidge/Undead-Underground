@@ -12,6 +12,7 @@ public class ChaseState : StateMachineBehaviour
 	{
 		agent = animator.GetComponent<NavMeshAgent>();
 		player = GameObject.FindGameObjectWithTag("Player").transform;
+
 	}
 
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
