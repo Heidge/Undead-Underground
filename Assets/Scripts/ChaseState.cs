@@ -18,14 +18,14 @@ public class ChaseState : StateMachineBehaviour
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
 	{
 		agent.SetDestination(player.position);
-		animator.transform.LookAt(player);
+		// animator.transform.LookAt(player);
 		float distance = Vector3.Distance(player.position, animator.transform.position);
 		//Debug.Log(animator.GetBool("isWalking") + " " + distance);
 		if (distance < 3f)
 		{
 			animator.SetBool("isWalking", false);
 			animator.SetBool("isAttacking", true);
-		}		
+		}
 	}
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

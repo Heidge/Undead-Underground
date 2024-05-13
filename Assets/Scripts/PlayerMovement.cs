@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate() {
         moveDir = new(inputVector.x, 0f, inputVector.y);
         if (moveDir != Vector3.zero) {
-            // Change la direction du vecteur vers la où regarde le player
+            // Change la direction du vecteur vers la oï¿½ regarde le player
             moveDir = transform.TransformDirection(moveDir);
             transform.position += moveSpeed * Time.deltaTime * moveDir;
         }

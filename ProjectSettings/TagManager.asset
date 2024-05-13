@@ -5,7 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Zombie
-  - Wave1
+  - StairLight
+  - Weapon
+  - SecondCamera
+  - BulletSpawn
+  - Light
   layers:
   - Default
   - TransparentFX
