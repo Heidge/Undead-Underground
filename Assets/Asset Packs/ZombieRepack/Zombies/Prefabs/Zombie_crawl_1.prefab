@@ -1580,7 +1580,7 @@ GameObject:
   - component: {fileID: -5724264123183627191}
   - component: {fileID: -1264317162668321470}
   - component: {fileID: 6226394836486998662}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Zombie_crawl_1
   m_TagString: Zombie
   m_Icon: {fileID: 0}
