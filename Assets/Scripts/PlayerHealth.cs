@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // This class manages the health of the player
 public class PlayerHealth : MonoBehaviour
 {
+	public GameObject gameOverCanvas;
 	// Maximum health the player can have
 	public int maxHealth = 100;
 
@@ -33,6 +35,14 @@ public class PlayerHealth : MonoBehaviour
 	private void Die()
 	{
 		// Log that the player has died
-		Debug.Log("Player died!");
+		Time.timeScale = 0;
+		gameOverCanvas.SetActive(true);
+	}
+
+	public void ReturnToMenu()
+	{
+		Time.timeScale = 1; 
+		gameOverCanvas.SetActive(false);
+		SceneManager.LoadScene(0);
 	}
 }
