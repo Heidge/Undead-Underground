@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 // This class controls the spawning of waves of zombies
 public class Waves : MonoBehaviour
@@ -22,6 +23,8 @@ public class Waves : MonoBehaviour
 
 	// The AudioSource component attached to this GameObject
 	private AudioSource audioSource;
+
+	public Text waveText;
 
 	// Awake is called when the script instance is being loaded
 	void Awake()
@@ -65,6 +68,10 @@ public class Waves : MonoBehaviour
 		if (audioSource.isPlaying == false)
 			audioSource.Play();
 
+		waveText.text = "Wave " + waveNumber.ToString();
+		waveText.enabled = true;
+		StartCoroutine(HideWaveText());
+
 		// Spawn the zombies
 		for (int i = 0; i < zombieNumber; i++)
 		{
@@ -79,4 +86,10 @@ public class Waves : MonoBehaviour
 		// Increment the wave number for the next wave
 		waveNumber++;
 	}
+
+    public IEnumerator HideWaveText()
+	{
+        yield return new WaitForSeconds(5.0f);
+		waveText.enabled = false;
+    }
 }
