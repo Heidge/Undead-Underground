@@ -22,9 +22,6 @@ public class PlayerHealth : MonoBehaviour
 		// Subtract the damage from the current health
 		currentHealth -= damage;
 
-		// Log the damage taken and the current health
-		Debug.Log("Player took " + damage + " damage. Current health: " + currentHealth);
-
 		// If the current health is less than or equal to zero, the player dies
 		if (currentHealth <= 0)
 		{
