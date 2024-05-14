@@ -48,7 +48,7 @@ public class Intro : MonoBehaviour
         lights = lights.OrderBy(lights => lights.transform.position.x).ToList();
         foreach (StairLight light in lights)
         {
-            yield return new WaitForSeconds(1.0f);
+            light.Switch(true);
         }
 
     }
