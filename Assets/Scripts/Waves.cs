@@ -37,6 +37,12 @@ public class Waves : MonoBehaviour
 		audioSource = GetComponent<AudioSource>();
 	}
 
+	void Update()
+	{
+		if (zombieNumber == 0)
+            StartCoroutine(WavesTransition());
+    }
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -53,10 +59,8 @@ public class Waves : MonoBehaviour
 	{
 		// Calculate the number of zombies to spawn in the next wave
 		zombieNumber = 5 + 5 * waveNumber;
-		Debug.Log("before wait 12s");
 		// Wait for 20 seconds before starting the next wave
 		yield return new WaitForSeconds(12.0f);
-        Debug.Log("after wait 12s");
         // Start the next wave
         StartWave();
 	}

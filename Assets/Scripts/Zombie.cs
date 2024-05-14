@@ -38,14 +38,6 @@ public class Zombie : MonoBehaviour
 
                 // Decrease the number of zombies in the current wave
                 Waves.instance.zombieNumber--;
-
-                // If there are no more zombies in the current wave
-                if (Waves.instance.zombieNumber == 0)
-                {
-                    Debug.Log("0 zombie, new wave");
-                    // Start the transition to the next wave
-                    StartCoroutine(Waves.instance.WavesTransition());
-                }
                     
                 // Start the coroutine to destroy the zombie after a delay
                 StartCoroutine(DestroyZombie(5f));
