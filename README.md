@@ -1,4 +1,3 @@
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
 # Undead Underground
 
 Undead Underground is a virtual reality video game offering players immersion in a post-apocalyptic environment where zombies, whose origin is unknown, continually threaten you. With two seasoned developers already proven with the development of the game Bluegun, the Holberton Laval studio delivers a VR experience blending multiple genres, which brings a refreshing breeze to the VR gaming landscape.
@@ -37,14 +36,6 @@ Start the server
 ```
 
 
-## Roadmap
-
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
-
-
-## Demo
-
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://katherineoelsner.com/)
 
 
 ## FAQ
