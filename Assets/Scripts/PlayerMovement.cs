@@ -1,4 +1,3 @@
-using UnityEngine;
 // Import the UnityEngine library
 using UnityEngine;
 
