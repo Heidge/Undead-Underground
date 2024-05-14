@@ -15037,6 +15037,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Origin
       objectReference: {fileID: 0}
+    - target: {fileID: 5260076264084113407, guid: cd4a59c6f08f0254a94e95aefe42b2a1, type: 3}
+      propertyPath: bulletHole
+      value: 
+      objectReference: {fileID: 3021360247129009387, guid: b2f8bc03f80e0aa4087c0c46a640564c, type: 3}
     - target: {fileID: 6179808447135200234, guid: cd4a59c6f08f0254a94e95aefe42b2a1, type: 3}
       propertyPath: m_Materials.Array.size
       value: 0
