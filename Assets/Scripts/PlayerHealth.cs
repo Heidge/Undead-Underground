@@ -27,22 +27,8 @@ public class PlayerHealth : MonoBehaviour
 		// If the current health is less than or equal to zero, the player dies
 		if (currentHealth <= 0)
 		{
-			Die();
-		}
+            SceneManager.LoadScene(2);
+        }
 	}
 
-	// This method is called when the player dies
-	private void Die()
-	{
-		// Log that the player has died
-		Time.timeScale = 0;
-		gameOverCanvas.SetActive(true);
-	}
-
-	public void ReturnToMenu()
-	{
-		Time.timeScale = 1; 
-		gameOverCanvas.SetActive(false);
-		SceneManager.LoadScene(0);
-	}
 }
