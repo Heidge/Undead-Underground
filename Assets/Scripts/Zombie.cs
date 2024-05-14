@@ -12,6 +12,22 @@ public class Zombie : MonoBehaviour
     // The animator component attached to the zombie
     public Animator animator;
 
+    private CapsuleCollider capsuleCollider;
+
+    private BoxCollider boxCollider;
+
+    /// <summary>
+    /// This method is called once when the script instance is being loaded.
+    /// </summary>
+    void Start()
+    {
+        // Attempt to get a reference to a CapsuleCollider component attached to the GameObject.
+        capsuleCollider = GetComponent<CapsuleCollider>();
+
+        // Attempt to get a reference to a BoxCollider component attached to the GameObject.
+        boxCollider = GetComponent<BoxCollider>();
+    }
+
     // This method is called when the zombie takes damage
     public void TakeDamage(int damage)
     {
@@ -36,8 +52,19 @@ public class Zombie : MonoBehaviour
                     // Trigger the "dead" animation
                     animator.SetTrigger("dead");
 
-                // Decrease the number of zombies in the current wave
-                Waves.instance.zombieNumber--;
+                // If a BoxCollider component is found, disable it.
+                if (boxCollider != null)
+                {
+                    boxCollider.enabled = false;
+                }
+                else
+                {
+                    // If a CapsuleCollider component is found, disable it.
+                    capsuleCollider.enabled = false;
+                }
+
+            // Decrease the number of zombies in the current wave
+            Waves.instance.zombieNumber--;
                     
                 // Start the coroutine to destroy the zombie after a delay
                 StartCoroutine(DestroyZombie(5f));
